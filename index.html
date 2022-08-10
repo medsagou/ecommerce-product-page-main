@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <title>Ecommerce product page main</title>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <div class="logo-manu-container">
+                <div class="menu-button-container">
+                    <button id="menu-button" class="menu-button"><img src="./images/icon-menu.svg" alt="menu"></button>
+                </div>
+                <div class="logo-container">
+                    <img src="./images/logo.svg" alt="logo">
+                </div>
+                <div id="menu" class="menu-container" area="not-active">
+                    <svg id="closeMenuBtn" class="close" width="14" height="15" xmlns="http://www.w3.org/2000/svg" fill="#69707D"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
+                    <ul class="menu">
+                        <li class="elem-menu"><a href="#">Collections</a></li>
+                        <li class="elem-menu"><a href="#">Men</a></li>
+                        <li class="elem-menu"><a href="#">Women</a></li>
+                        <li class="elem-menu"><a href="#">About</a></li>
+                        <li class="elem-menu"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="profile-cart-container">
+                <div id="cart-container" class="cart-container">
+                    <img src="./images/icon-cart.svg" alt="">
+                    <div id="notification" class="notification-container" state="not-active">
+                        <p id="notification-text" class="number-notification-text">3</p>
+                    </div>
+                </div>
+                <div class="profile-img-container">
+                    <img src="./images/image-avatar.png" alt="">
+                </div>
+            </div>
+            <div id="cart-content-conatiner" class="cart-content-container" state="false" style="display:none;">
+                <div class="title-text-container">
+                    <p class="title-text">Cart</p>
+                </div>
+                <div id="empty" class="empty-cart-text-container | inside-cart" preview="true">
+                    <p class="empty-cart-text">Your cart is empty.</p>
+                </div>
+                <div id="content" class="content | inside-cart" preview="false">
+                    <div class="img-product-name-price-delete">
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                        <div class="title-container-and-price">
+                            <p class="product-name-text">Fall Limited Edition Sneakers</p>
+                            <p id="price-and-number-of-items" class="price" number="0">$125.00 x 1 <span class="total">$375.00</span></p>
+                        </div>
+                        <div id="delete-button" class="delete-button">
+                            <img src="./images/icon-delete.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="checkout-button-container">
+                        <button class="checkout-button">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main">
+            <div class="product-img-container">
+                <img  class="product-img-preview | main-page-product-img-preview" src="./images/image-product-1.jpg" alt="preview" preview="true">
+                <img  class="product-img-preview | main-page-product-img-preview" src="./images/image-product-2.jpg" alt="preview" preview="false">
+                <img  class="product-img-preview | main-page-product-img-preview" src="./images/image-product-3.jpg" alt="preview" preview="false">
+                <img  class="product-img-preview | main-page-product-img-preview" src="./images/image-product-4.jpg" alt="preview" preview="false">
+
+                <div id="mobile-previous-arrow" class="previous-container | mobile-arrow-container">
+                    <svg class="previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg" stroke="#1D2026"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                </div>
+                <div id="mobile-next-arrow" class="next-container | mobile-arrow-container">
+                    <svg class="next" width="12" height="18" xmlns="http://www.w3.org/2000/svg" stroke="#1D2026"><path d="m2 1 8 8-8 8"  stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                </div>
+
+                <div class="image-pre-container | not-pop-up-image-pre-container" preview="true">
+                    <img class="product-img" src="./images/image-product-1-thumbnail.jpg"  alt="prev">
+                    <div class="mask"></div>
+                </div>
+                <div class="image-pre-container | not-pop-up-image-pre-container" preview="false">
+                    <img class="product-img" src="./images/image-product-2-thumbnail.jpg"  alt="prev">
+                    <div class="mask"></div>
+                </div>
+                <div class="image-pre-container | not-pop-up-image-pre-container" preview="false">
+                    <img class="product-img" src="./images/image-product-3-thumbnail.jpg"  alt="prev">
+                    <div class="mask"></div>
+                </div>
+                <div class="image-pre-container | not-pop-up-image-pre-container" preview="false">
+                    <img class="product-img" src="./images/image-product-4-thumbnail.jpg"  alt="prev">
+                    <div class="mask"></div>
+                </div>
+            </div> <!-- product-img-container -->
+
+            <div class="text-product-container">
+                <h3 class="company-name">Sneaker Company</h3>
+                <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+                <div class="discription-container">
+                    <p class="discription">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                </div>
+                <div class="price-discount-percentale-container">
+                    <div class="current-price-discount-percentale-container">
+                        <p class="current-price">$125.00</p>
+                        <p class="discount-percentale">50%</p>
+                    </div>
+                    <div class="old-price">$250.00</div>
+                </div>
+                <div class="items-numbers-button-container">
+                    <div class="items-numbers-container">
+                        <div id="minus-button" class="minus-button">
+                            <img src="./images/icon-minus.svg" alt="">
+                        </div>
+                        <p id="number-of-items" class="number-of-items">0</p>
+                        <div id="plus-button" class="plus-button">
+                            <img src="./images/icon-plus.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button id="add-to-cart-button" class="button">
+                            <p class="add-to-cart-text"><img src="./images/icon-cart-white.svg" alt="">Add to cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div> <!-- text-product-container -->
+        </div>
+    </div>
+    <div id="preview-light-box" class="preview-light-box" preview="not-active">
+        <div class="product-img-container | pop-up-container">
+            <div id="desktop-previous-arrow" class="previous-container | desktop-previous-arrow">
+                <svg class="previous" width="12" height="18" xmlns="http://www.w3.org/2000/svg" stroke="#1D2026"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+            <div id="desktop-next-arrow" class="next-container | desktop-next-arrow">
+                <svg class="next" width="12" height="18" xmlns="http://www.w3.org/2000/svg" stroke="#1D2026"><path d="m2 1 8 8-8 8"  stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+
+            <svg id="closePopUp" class="close" width="14" height="15" xmlns="http://www.w3.org/2000/svg" fill="#69707D"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg>
+
+            <img  class="product-img-preview | pop-product-img-preview" src="./images/image-product-1.jpg" alt="preview" preview="true">
+            <img  class="product-img-preview | pop-product-img-preview" src="./images/image-product-2.jpg" alt="preview" preview="false">
+            <img  class="product-img-preview | pop-product-img-preview" src="./images/image-product-3.jpg" alt="preview" preview="false">
+            <img  class="product-img-preview | pop-product-img-preview" src="./images/image-product-4.jpg" alt="preview" preview="false">
+
+            <div class="image-pre-container | pop-up-image-pre-container" preview="true">
+                <img class="product-img | pop-up" src="./images/image-product-1-thumbnail.jpg"  alt="prev">
+                <div class="mask"></div>
+            </div>
+            <div class="image-pre-container | pop-up-image-pre-container" preview="false">
+                <img class="product-img | pop-up" src="./images/image-product-2-thumbnail.jpg"  alt="prev">
+                <div class="mask"></div>
+            </div>
+            <div class="image-pre-container | pop-up-image-pre-container" preview="false">
+                <img class="product-img | pop-up" src="./images/image-product-3-thumbnail.jpg"  alt="prev">
+                <div class="mask"></div>
+            </div>
+            <div class="image-pre-container | pop-up-image-pre-container" preview="false">
+                <img class="product-img | pop-up" src="./images/image-product-4-thumbnail.jpg"  alt="prev">
+                <div class="mask"></div>
+            </div>
+        </div> <!-- product-img-container -->
+    </div>
+</body>
+</html>
